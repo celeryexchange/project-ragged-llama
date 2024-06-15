@@ -7,11 +7,10 @@ import ssl
 ssl._create_default_https_context = ssl._create_unverified_context
 
 # take environment variables from .env.
-load_dotenv()  
+load_dotenv()
 
-client = OpenAI (
-    api_key=os.environ.get("OPENAI_API_KEY")
-)
+client = OpenAI(api_key=os.environ.get("OPENAI_API_KEY"))
+
 
 def generate_response(context, query):
     """
