@@ -1,4 +1,7 @@
 site_name: Project Ragged Llama
-# 
-site_author: Your name (or your organization/company/team)
-# 
+site_author: CeleryExchange
+nav:
+  - Home: index.md
+  - Getting started: getting-started.md
+  - Tools: list-of-tools.md
+theme: readthedocs

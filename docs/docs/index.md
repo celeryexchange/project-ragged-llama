@@ -1,4 +1,4 @@
-# Project Ragged Llama
+# Welcome
 
 ## Description
 
@@ -9,16 +9,15 @@ Corporate wiki chatbot implementation of a RAG-based LLM.
 The Makefile contains the central entry points for common tasks related to this project.
 
 * `make` - List all available functions
-* `make create_environment`- Create new conda environment
-* `make update_environment`- Update conda environment
-* `make clean`- Delete all compiled Python files
-* `make lint`- Lint using flake8 and black (use `make format` to do formatting)
-* `make format`- Format source code with black
+* `make create_environment` - Create the project environment using `conda`
+* `make update_environment` - Update the project environment
+* `make clean` - Delete all compiled Python files
+* `make lint` - Lint using `flake8` and `black` (use `make format` to do formatting)
+* `make format` - Format source code with `black`
 
 ## Project Organization
 
-```
-├── LICENSE            <- Open-source license if one is chosen
+```text
 ├── Makefile           <- Makefile with convenience commands like `make create_environment` or `make format`
 ├── README.md          <- The top-level README for developers using this project.
 ├── data
