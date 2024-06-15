@@ -1,0 +1,14 @@
+name: ragged_llama
+channels:
+  - conda-forge
+dependencies:
+  - python=3.10
+  - openai
+  - black
+  - flake8
+  - isort
+  - pip
+  - pip:
+    - python-dotenv
+    - mkdocs
+    - -e .
