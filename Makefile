@@ -11,7 +11,7 @@ PYTHON_INTERPRETER = python
 #################################################################################
 
 ## Install Python Dependencies
-.PHONY: requirements
+.PHONY: update_environment
 requirements:
 	conda env update --name $(PROJECT_NAME) --file environment.yml --prune
 	
