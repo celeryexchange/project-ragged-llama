@@ -38,6 +38,11 @@ format:
 create_environment:
 	conda env create --name $(PROJECT_NAME) -f environment.yml
 
+## Update project documentation and deploy it to GitHub
+.PHONY: update_documentation
+update_documentation:
+	mkdocs build
+	mkdocs gh-deploy
 
 #################################################################################
 # PROJECT RULES                                                                 #
