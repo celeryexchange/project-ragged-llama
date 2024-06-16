@@ -1,4 +1,4 @@
-name: ragged_llama
+name: ragged-llama
 channels:
   - conda-forge
 dependencies:

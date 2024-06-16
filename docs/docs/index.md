@@ -41,9 +41,9 @@ The Makefile contains the central entry points for common tasks related to this 
 │
 ├── setup.cfg          <- Configuration file for flake8
 │
-└── ragged_llama       <- Source code for use in this project.
+└── ragged-llama       <- Source code for use in this project.
     │
-    ├── __init__.py    <- Makes ragged_llama a Python module
+    ├── __init__.py    <- Makes ragged-llama a Python module
     │
     ├── data           <- Scripts to download or generate data
     │   └── make_dataset.py
