@@ -4,12 +4,9 @@
 
 Corporate wiki chatbot implementation of a RAG-based LLM.
 
-## What we're building (reference)
+## What we're building
 
-![Simple Workflow]()
-
-
-
+![Simple Workflow](https://raw.githubusercontent.com/celeryexchange/project-ragged-llama/main/references/rag-sample-workflow.png)
 
 
 ## Commands
