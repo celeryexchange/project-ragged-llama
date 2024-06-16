@@ -2,7 +2,7 @@
 # GLOBALS                                                                       #
 #################################################################################
 
-PROJECT_NAME = ragged_llama
+PROJECT_NAME = ragged-llama
 PYTHON_VERSION = 3.10
 PYTHON_INTERPRETER = python
 
@@ -10,17 +10,16 @@ PYTHON_INTERPRETER = python
 # COMMANDS                                                                      #
 #################################################################################
 
-## Install Python Dependencies
+## Set up Python environment [conda]
+.PHONY: create_environment
+create_environment:
+	conda env create --name $(PROJECT_NAME) -f environment.yml
+
+## Update Python dependencies [conda]
 .PHONY: update_environment
-requirements:
+update_environment:
 	conda env update --name $(PROJECT_NAME) --file environment.yml --prune
 	
-## Delete all compiled Python files
-.PHONY: clean
-clean:
-	find . -type f -name "*.py[co]" -delete
-	find . -type d -name "__pycache__" -delete
-
 ## Lint using flake8 and black (use `make format` to do formatting)
 .PHONY: lint
 lint:
@@ -33,16 +32,18 @@ lint:
 format:
 	black --config pyproject.toml ragged_llama
 
-## Set up python interpreter environment
-.PHONY: create_environment
-create_environment:
-	conda env create --name $(PROJECT_NAME) -f environment.yml
-
 ## Update project documentation and deploy it to GitHub
 .PHONY: update_documentation
 update_documentation:
 	mkdocs build
 	mkdocs gh-deploy
+
+## Delete all compiled Python files
+.PHONY: clean
+clean:
+	find . -type f -name "*.py[co]" -delete
+	find . -type d -name "__pycache__" -delete
+
 
 #################################################################################
 # PROJECT RULES                                                                 #
