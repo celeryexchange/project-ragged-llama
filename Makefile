@@ -2,7 +2,7 @@
 # GLOBALS                                                                       #
 #################################################################################
 
-PROJECT_NAME = ragged-llama
+PROJECT_NAME = ragged_llama
 PYTHON_VERSION = 3.10
 PYTHON_INTERPRETER = python
 
@@ -24,14 +24,14 @@ clean:
 ## Lint using flake8 and black (use `make format` to do formatting)
 .PHONY: lint
 lint:
-	flake8 ragged-llama
-	isort --check --diff --profile black ragged-llama
-	black --check --config pyproject.toml ragged-llama
+	flake8 ragged_llama
+	isort --check --diff --profile black ragged_llama
+	black --check --config pyproject.toml ragged_llama
 
 ## Format source code with black
 .PHONY: format
 format:
-	black --config pyproject.toml ragged-llama
+	black --config pyproject.toml ragged_llama
 
 ## Set up python interpreter environment
 .PHONY: create_environment

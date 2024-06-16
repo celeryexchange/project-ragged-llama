@@ -43,9 +43,9 @@ context_texts = """
 Flexible working
 Updated on 1 July 2024
 
-The health and wellbeing of our employees is our number one priority. That is why, at Our Company,
+The health and wellbeing of our employees is our number one priority. That is why, at Tesco Mobile,
 we're proud to support flexible working arrangements. You can work from home two days per week if
-you're based in Slough or London. For those based in Manchester, the policy requires you to be in the
+you're based in Slough or London. For those based in Manchester, the policy reqruires you to be in the
 office four days per week.
 
 Update on Flexible working
