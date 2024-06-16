@@ -11,15 +11,20 @@ PYTHON_INTERPRETER = python
 #################################################################################
 
 ## Set up Python environment [conda]
-.PHONY: create_environment
-create_environment:
+.PHONY: env
+env:
 	conda env create --name $(PROJECT_NAME) -f environment.yml
 
 ## Update Python dependencies [conda]
-.PHONY: update_environment
-update_environment:
+.PHONY: update_env
+update_env:
 	conda env update --name $(PROJECT_NAME) --file environment.yml --prune
 	
+## Remove Python environment [conda]
+.PHONY: remove_env
+remove_env:
+	conda remove --name $(PROJECT_NAME) --all
+
 ## Lint using flake8 and black (use `make format` to do formatting)
 .PHONY: lint
 lint:
@@ -31,12 +36,6 @@ lint:
 .PHONY: format
 format:
 	black --config pyproject.toml ragged_llama
-
-## Update project documentation and deploy it to GitHub
-.PHONY: update_documentation
-update_documentation:
-	mkdocs build
-	mkdocs gh-deploy
 
 ## Delete all compiled Python files
 .PHONY: clean

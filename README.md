@@ -2,5 +2,6 @@
 
 Corporate wiki chatbot implementation of a RAG-based LLM.
 
-* [Project documentation](https://celeryexchange.github.io/project-ragged-llama/)
+* [Documentation](https://celeryexchange.github.io/project-ragged-llama/)
+* [Kanban](https://github.com/users/celeryexchange/projects/1)
 

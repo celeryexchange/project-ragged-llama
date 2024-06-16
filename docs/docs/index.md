@@ -4,15 +4,24 @@
 
 Corporate wiki chatbot implementation of a RAG-based LLM.
 
+## What we're building (reference)
+
+![Simple Workflow]()
+
+
+
+
+
 ## Commands
 
 The Makefile contains the central entry points for common tasks related to this project.
 
 * `make` - List all available functions
-* `make create_environment` - Create the project environment using `conda`
-* `make update_environment` - Update the project environment
+* `make env` - Create the project environment using `conda`
+* `make update_env` - Update the project environment
+* `make remove_env` - Delete the project environment
 * `make clean` - Delete all compiled Python files
-* `make lint` - Lint using `flake8` and `black` (use `make format` to do formatting)
+* `make lint` - Lint using `flake8` and `black` 
 * `make format` - Format source code with `black`
 
 ## Project Organization
