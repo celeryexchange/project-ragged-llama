@@ -12,6 +12,11 @@ load_dotenv()
 
 client = OpenAI(api_key=os.environ.get("OPENAI_API_KEY"))
 
+ai_system_context = """
+You are a helpful, respectful and honest assistant. Always answer as helpfully as possible, while being safe. 
+If a question does not make any sense, or is not factually coherent, explain why instead of answering something not correct. 
+If you don't know the answer to a question, please don't share false information.
+"""
 
 def generate_response(context, query):
     """
@@ -25,20 +30,25 @@ def generate_response(context, query):
     str: The generated response from ChatGPT.
     """
     chat_completion = client.chat.completions.create(
+        model="gpt-4o",
         messages=[
+            {
+                "role": "system",
+                "content": ai_system_context
+            },
             {
                 "role": "user",
                 "content": f"Context: {context}\n\nQuestion: {query}",
             }
         ],
-        model="gpt-4o",
+        temperature=0.7,
     )
 
     return chat_completion.choices[0].message.content
 
 
 # Example query
-query = "Can I work from home? I am based in Slough."
+query = "Can I work from home?"
 context_texts = """
 Flexible working
 Updated on 1 July 2024
