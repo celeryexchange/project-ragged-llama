@@ -38,7 +38,7 @@ def generate_response(context, query):
 
 
 # Example query
-query = "What is the company policy on remote work? I am based in Slough. Be concise and factual."
+query = "Can I work from home? I am based in Slough."
 context_texts = """
 Flexible working
 Updated on 1 July 2024
